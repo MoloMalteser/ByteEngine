@@ -26,7 +26,12 @@ Beide Sprachen teilen sich dieselbe Syntax und ermöglichen das einfache Laden v
      ```shadowcode
      init #url("https://example.com/api.sdc")  $ Laden aus einer URL
      init #file("plugin.sdc")                 $ Laden aus einer lokalen Datei
+     init #plugin("name.plugin") $ Laden eines IDE internen Plugins (Plugin Manager)
      ```
+   - Notwendig:
+      ```shadowcode
+      init #plugin("byteengine.plugin")
+      ```
 
 2. **Kommentare:**
    - Kommentare werden mit `$` gekennzeichnet:
@@ -129,6 +134,7 @@ make
 Hier ist ein vollständiges Beispiel, das alle Funktionen von ShadowCode demonstriert:
 
 ```shadowcode
+init #plugin("byteengine.plugin")
 init #ShadowCode
 
 $ Initialisierung von Variablen
