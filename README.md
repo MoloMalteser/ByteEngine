@@ -134,8 +134,8 @@ make
 Hier ist ein vollständiges Beispiel, das alle Funktionen von ShadowCode demonstriert:
 
 ```shadowcode
+init #shadowcode / init #shadowscript $ Je nach Programmiersprache
 init #plugin("byteengine.plugin")
-init #ShadowCode
 
 $ Initialisierung von Variablen
 var(@x) 
