@@ -111,7 +111,7 @@ Lade SDL2 von libsdl.org herunter und integriere die Bibliotheken.
 brew install sdl2 sdl2_image
 ```
 
-	3. Baue das Projekt:
+3. Baue das Projekt:
 
 ```bash
 mkdir build && cd build
@@ -119,7 +119,7 @@ cmake ..
 make
 ```
 
-	4.	Starte das Beispiel:
+4.	Starte das Beispiel:
 
 ```Bash
 ./ByteEngineDemo
