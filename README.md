@@ -101,11 +101,11 @@ sudo apt-get install libsdl2-dev libsdl2-image-dev
 ```
 
 
-	•	Windows:
+•	Windows:
 ```bash
 Lade SDL2 von libsdl.org herunter und integriere die Bibliotheken.
 ```
-	•	MacOS:
+•	MacOS:
 
 ```bash
 brew install sdl2 sdl2_image
