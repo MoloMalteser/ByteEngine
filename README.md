@@ -92,7 +92,8 @@ Beide Sprachen teilen sich dieselbe Syntax und ermöglichen das einfache Laden v
    cd ByteEngine
    ```
 
-	**2.	Installiere Abhängigkeiten:**
+2.	Installiere Abhängigkeiten:
+
 	•	Linux (Ubuntu):
 
 ```bash
@@ -100,15 +101,17 @@ sudo apt-get install libsdl2-dev libsdl2-image-dev
 ```
 
 
-	•	**Windows:**
-	•	**Lade SDL2 von libsdl.org herunter und integriere die Bibliotheken.**
-	•	**MacOS:**
+	•	Windows:
+```bash
+Lade SDL2 von libsdl.org herunter und integriere die Bibliotheken.
+```
+	•	MacOS:
 
 ```bash
 brew install sdl2 sdl2_image
 ```
 
-	3. **Baue das Projekt:**
+	3. Baue das Projekt:
 
 ```bash
 mkdir build && cd build
@@ -187,50 +190,3 @@ Möchtest du mitentwickeln? Folge diesen Schritten:
 ### Lizenz
 
 Byte 1.0 ist Open-Source, jedoch mit Einschränkungen für kommerzielle Nutzung. Siehe LICENSE für Details.
-
----
-
-### **Beispieldatei: example.sdc**
-
-Speichere das folgende Skript als `example.sdc`. Es enthält alle Funktionen, die **ShadowCode** unterstützt:
-
-```shadowcode
-init #ShadowCode
-
-$ Variablen initialisieren
-var(@score)
-@score = 0
-
-$ Sprite erstellen
-Sprite.player.goto(100, 100)
-Sprite.player.show
-
-$ Funktion: Sprite bewegen
-func.moveSprite(dx, dy)
-    Sprite.player.goto(dx, dy)
-    debug("Sprite bewegt zu X=" + dx + ", Y=" + dy)
-func.end
-
-$ Funktion: Score erhöhen
-func.increaseScore()
-    @score = @score + 1
-    show("Score: " + @score)
-func.end
-
-$ Spiel-Loop
-while (true [
-    if (button.keyboard.up.pressed?() = true [
-        moveSprite(100, 50)
-    ])
-
-    if (Sprite.player.touched?() = true [
-        increaseScore()
-    ])
-])
-
-Zusammenfassung
-	•	README.md: Beschreibt die Engine und Syntax.
-	•	example.sdc: Eine funktionierende Demonstration aller ShadowCode-Features.
-	•	Enthält Tastatureingaben, Sprites, Funktionen, Schleifen, und Debugging.
-
-Diese Dateien kannst du direkt in dein Projekt einfügen!
